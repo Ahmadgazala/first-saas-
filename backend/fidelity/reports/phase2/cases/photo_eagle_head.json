@@ -1,0 +1,440 @@
+{
+ "case": "photo_eagle_head",
+ "kind": "photo",
+ "note": "eagle head crop",
+ "full_body": false,
+ "segmentation": {
+  "method": "ai",
+  "confidence": 0.47,
+  "seconds": 2.3,
+  "suitable": false,
+  "suitability_overall": 0.689,
+  "suitability_blocking": [
+   "The subject is cut off by the image border; the whole body should be visible."
+  ]
+ },
+ "normalization_trace_equals_production": true,
+ "reference_2d": "pipeline segmentation (no ground truth)",
+ "stages_2d_vs_reference": {
+  "largest_component": {
+   "iou": 1.0,
+   "bf": 1.0,
+   "bf_precision": 1.0,
+   "bf_recall": 1.0,
+   "bf_tau_mm": 5.0,
+   "bf_tight": 1.0,
+   "hausdorff_mm": 0.0,
+   "hd95_mm": 0.0,
+   "assd_mm": 0.0,
+   "hausdorff_pct": 0.0,
+   "area_ratio": 1.0,
+   "recall_area": 0.9999999999999992,
+   "precision_area": 0.9999999999999992
+  },
+  "simplified": {
+   "iou": 0.9984058761168917,
+   "bf": 1.0,
+   "bf_precision": 1.0,
+   "bf_recall": 1.0,
+   "bf_tau_mm": 5.0,
+   "bf_tight": 1.0,
+   "hausdorff_mm": 0.40025178383212917,
+   "hd95_mm": 0.29392516903397914,
+   "assd_mm": 0.13991570319173482,
+   "hausdorff_pct": 0.16010071353285166,
+   "area_ratio": 1.0001267671129048,
+   "recall_area": 0.9992656352394531,
+   "precision_area": 0.999138977275913
+  },
+  "opened_min_feature": {
+   "iou": 0.9983394927986661,
+   "bf": 1.0,
+   "bf_precision": 1.0,
+   "bf_recall": 1.0,
+   "bf_tau_mm": 5.0,
+   "bf_tight": 1.0,
+   "hausdorff_mm": 0.9439888674521496,
+   "hd95_mm": 0.2966840591175459,
+   "assd_mm": 0.1333217663321007,
+   "hausdorff_pct": 0.37759554698085984,
+   "area_ratio": 1.0000504546688047,
+   "recall_area": 0.999194262877417,
+   "precision_area": 0.9991438514053061
+  },
+  "reinforced": {
+   "iou": 0.9983394927986661,
+   "bf": 1.0,
+   "bf_precision": 1.0,
+   "bf_recall": 1.0,
+   "bf_tau_mm": 5.0,
+   "bf_tight": 1.0,
+   "hausdorff_mm": 0.9439888674521496,
+   "hd95_mm": 0.2966840591175459,
+   "assd_mm": 0.1333217663321007,
+   "hausdorff_pct": 0.37759554698085984,
+   "area_ratio": 1.0000504546688047,
+   "recall_area": 0.999194262877417,
+   "precision_area": 0.9991438514053061
+  },
+  "normalized_final": {
+   "iou": 0.9982032557964401,
+   "bf": 1.0,
+   "bf_precision": 1.0,
+   "bf_recall": 1.0,
+   "bf_tau_mm": 5.0,
+   "bf_tight": 1.0,
+   "hausdorff_mm": 0.9918235884678112,
+   "hd95_mm": 0.2963004525265591,
+   "assd_mm": 0.1358623249827755,
+   "hausdorff_pct": 0.39672943538712446,
+   "area_ratio": 0.9999449918984885,
+   "recall_area": 0.9990733407804165,
+   "precision_area": 0.9991283009314172
+  }
+ },
+ "reconstruction": {
+  "source": "cached app reconstruction",
+  "available": true,
+  "alignment_iou": 0.8619149530101423,
+  "depth_ratio": 0.5507969416274406,
+  "gate": "pass",
+  "projection_vs_reference_2d": {
+   "iou": 0.8573802618547652,
+   "bf": 0.3282411427605609,
+   "bf_precision": 0.33570159857904086,
+   "bf_recall": 0.3211050724637681,
+   "bf_tau_mm": 5.0,
+   "bf_tight": 0.2284493458615244,
+   "hausdorff_mm": 15.61857112524303,
+   "hd95_mm": 13.181339576890053,
+   "assd_mm": 6.7413050979760065,
+   "hausdorff_pct": 6.247428450097211,
+   "area_ratio": 1.100508546413389,
+   "recall_area": 0.9696100494540963,
+   "precision_area": 0.8810563558221359
+  },
+  "stage_2p5d_body_vs_reconstruction": {
+   "volume_iou": 0.8252855277542465,
+   "proj_iou_front": 0.8505669697990345,
+   "proj_iou_top": 0.7957012436201567,
+   "completeness_mean_mm": 5.869198838981323,
+   "chamfer_mm": 4.638282475756135
+  }
+ },
+ "modes": {
+  "kit_estimated": {
+   "status": "ok",
+   "seconds": 4.7,
+   "pieces": 15,
+   "roles": {
+    "spine": 1,
+    "limb": 2,
+    "rib": 8,
+    "vertebra": 3,
+    "spacer": 1
+   },
+   "piece_count_target": 30,
+   "orientation": "vertical",
+   "shape_source": "estimated",
+   "warnings": [
+    "No head was detected: the kit is built as a generic structure along the main axis.",
+    "The fossil kit has 15 pieces (target 30): the count follows the detected structure and what fits at this size and thickness."
+   ],
+   "side_vs_reference": {
+    "raw": {
+     "iou": 0.40055666751768143,
+     "bf": 0.0879471580842512,
+     "bf_precision": 0.06848983543078413,
+     "bf_recall": 0.1228467815049864,
+     "bf_tau_mm": 5.0,
+     "bf_tight": 0.03825612687138894,
+     "hausdorff_mm": 70.80630032175816,
+     "hd95_mm": 58.84476453145311,
+     "assd_mm": 28.82117542546571,
+     "hausdorff_pct": 28.322520128703268,
+     "area_ratio": 0.4284566443916473,
+     "recall_area": 0.40853601031732995,
+     "precision_area": 0.9535060680349534
+    },
+    "envelope6mm": {
+     "iou": 0.42343219496826073,
+     "bf": 0.08903557406582788,
+     "bf_precision": 0.0721836303231652,
+     "bf_recall": 0.1161524500907441,
+     "bf_tau_mm": 5.0,
+     "bf_tight": 0.04024371306776913,
+     "hausdorff_mm": 53.61001383133356,
+     "hd95_mm": 49.47988390410849,
+     "assd_mm": 22.465973995067998,
+     "hausdorff_pct": 21.444005532533424,
+     "area_ratio": 0.4537339644833076,
+     "recall_area": 0.4324461436639077,
+     "precision_area": 0.9530830343643295
+    }
+   },
+   "region_recall_vs_reference": {
+    "torso": 0.4084719579088772,
+    "extremity": 0.4602744425385935
+   },
+   "side_vs_generator_input": {
+    "raw": {
+     "iou": 0.40051330324270046,
+     "bf": 0.09000409756031484,
+     "bf_precision": 0.07042594385285576,
+     "bf_recall": 0.12465878070973613,
+     "bf_tau_mm": 5.0,
+     "bf_tight": 0.03863304374567541,
+     "hausdorff_mm": 70.79571664648843,
+     "hd95_mm": 58.963320046888924,
+     "assd_mm": 28.954650662608987,
+     "hausdorff_pct": 28.31828665859537,
+     "area_ratio": 0.42848021427476984,
+     "recall_area": 0.40851144527025496,
+     "precision_area": 0.9533962868313225
+    },
+    "envelope6mm": {
+     "iou": 0.42339119944232245,
+     "bf": 0.09093781819458586,
+     "bf_precision": 0.07399577167019028,
+     "bf_recall": 0.11794171220400729,
+     "bf_tau_mm": 5.0,
+     "bf_tight": 0.04043885117805545,
+     "hausdorff_mm": 53.56052619143756,
+     "hd95_mm": 49.52788824569885,
+     "assd_mm": 22.541489749621658,
+     "hausdorff_pct": 21.424210476575023,
+     "area_ratio": 0.4537589249003103,
+     "recall_area": 0.43242367885413663,
+     "precision_area": 0.9529810988271781
+    }
+   },
+   "degradation": {
+    "trimmed_axis_fraction": 0.0,
+    "ribs_requested": 14,
+    "vertebrae_requested": 12,
+    "dropped_plates": [],
+    "rib_attempts": 48,
+    "rib_first_try": 8,
+    "rib_shrunk": 0,
+    "rib_failed_attempts": 40,
+    "rib_shrink_area_ratio_mean": null,
+    "vertebra_attempts": 65,
+    "vertebra_first_try": 3,
+    "vertebra_shrunk": 0,
+    "vertebra_failed_attempts": 62,
+    "vertebra_shrink_area_ratio_mean": null,
+    "girdle_attempts": 1,
+    "girdle_first_try": 1,
+    "girdle_shrunk": 0,
+    "girdle_failed_attempts": 0,
+    "girdle_shrink_area_ratio_mean": null,
+    "skull_spacer_attempts": 1,
+    "skull_spacer_first_try": 0,
+    "skull_spacer_shrunk": 0,
+    "skull_spacer_failed_attempts": 1,
+    "skull_spacer_shrink_area_ratio_mean": null,
+    "ribs_placed": 8,
+    "vertebrae_placed": 3,
+    "warnings": [
+     "No head was detected: the kit is built as a generic structure along the main axis.",
+     "The fossil kit has 15 pieces (target 30): the count follows the detected structure and what fits at this size and thickness."
+    ],
+    "intended_extra_pieces": 102,
+    "side_iou_actual": 0.40055666751768143,
+    "side_iou_intended": 0.5664583969388373,
+    "side_env_iou_actual": 0.42343219496826073,
+    "side_env_iou_intended": 0.6515184770773316,
+    "front_area_actual_mm2": 6827.26706852023,
+    "front_area_intended_mm2": 14111.744346343283
+   },
+   "sheet_fit_attempts": 1,
+   "volume_vs_own_estimated_body": {
+    "reference": "generator's own estimated 2.5D body",
+    "volume_iou": 0.03136994325329477,
+    "proj_iou_front": 0.2851799167588641,
+    "proj_iou_top": 0.20710642244377464,
+    "coverage_6mm": 0.0882846894416377,
+    "chamfer_mm": 22.670455708189564
+   }
+  },
+  "solid_estimated": {
+   "status": "failed",
+   "error": "PIECES_DO_NOT_FIT: These pieces do not fit on the selected sheet. Increase the sheet size or reduce the puzzle size.",
+   "engine_rejections": []
+  },
+  "kit_ai3d": {
+   "status": "ok",
+   "seconds": 7.0,
+   "pieces": 24,
+   "roles": {
+    "spine": 1,
+    "limb": 2,
+    "rib": 10,
+    "vertebra": 10,
+    "spacer": 1
+   },
+   "piece_count_target": 30,
+   "orientation": "vertical",
+   "shape_source": "mesh",
+   "warnings": [
+    "No head was detected: the kit is built as a generic structure along the main axis.",
+    "The fossil kit has 24 pieces (target 30): the count follows the detected structure and what fits at this size and thickness."
+   ],
+   "side_vs_reference": {
+    "raw": {
+     "iou": 0.5419566702503216,
+     "bf": 0.22815560714406755,
+     "bf_precision": 0.16329113924050634,
+     "bf_recall": 0.3785131459655485,
+     "bf_tau_mm": 5.0,
+     "bf_tight": 0.12898176150364085,
+     "hausdorff_mm": 74.96745217395707,
+     "hd95_mm": 60.652739867815555,
+     "assd_mm": 26.51817752153684,
+     "hausdorff_pct": 29.98698086958283,
+     "area_ratio": 0.5691083942938618,
+     "recall_area": 0.5514997775490531,
+     "precision_area": 0.9690592918302371
+    },
+    "envelope6mm": {
+     "iou": 0.5710105615902344,
+     "bf": 0.24294744844718677,
+     "bf_precision": 0.17939145043867835,
+     "bf_recall": 0.37624660018132366,
+     "bf_tau_mm": 5.0,
+     "bf_tight": 0.1415860451893115,
+     "hausdorff_mm": 46.423952056473865,
+     "hd95_mm": 40.061413615529915,
+     "assd_mm": 14.79487382996599,
+     "hausdorff_pct": 18.569580822589547,
+     "area_ratio": 0.5997281644210581,
+     "recall_area": 0.5814484637411632,
+     "precision_area": 0.9695200229631685
+    }
+   },
+   "region_recall_vs_reference": {
+    "torso": 0.5671868353296765,
+    "extremity": 0.5071698113207547
+   },
+   "side_vs_generator_input": {
+    "raw": {
+     "iou": 0.5038682565035117,
+     "bf": 0.17332075051290088,
+     "bf_precision": 0.12009493670886076,
+     "bf_recall": 0.31127886323268206,
+     "bf_tau_mm": 5.0,
+     "bf_tight": 0.07792543189963347,
+     "hausdorff_mm": 78.10704240741794,
+     "hd95_mm": 68.14909567067481,
+     "assd_mm": 32.1389229211883,
+     "hausdorff_pct": 31.242816962967172,
+     "area_ratio": 0.5171321896123513,
+     "recall_area": 0.5083123125709419,
+     "precision_area": 0.9829446373314704
+    },
+    "envelope6mm": {
+     "iou": 0.5304589268428236,
+     "bf": 0.18896349843022026,
+     "bf_precision": 0.1360836288967706,
+     "bf_recall": 0.30905861456483125,
+     "bf_tau_mm": 5.0,
+     "bf_tight": 0.0811863928605873,
+     "hausdorff_mm": 54.948581236636514,
+     "hd95_mm": 47.391822712553044,
+     "assd_mm": 18.496569218519962,
+     "hausdorff_pct": 21.979432494654606,
+     "area_ratio": 0.5449554811506021,
+     "recall_area": 0.5354834502103899,
+     "precision_area": 0.9826187069075564
+    }
+   },
+   "degradation": {
+    "trimmed_axis_fraction": 0.0,
+    "ribs_requested": 14,
+    "vertebrae_requested": 12,
+    "dropped_plates": [],
+    "rib_attempts": 34,
+    "rib_first_try": 10,
+    "rib_shrunk": 0,
+    "rib_failed_attempts": 24,
+    "rib_shrink_area_ratio_mean": null,
+    "vertebra_attempts": 49,
+    "vertebra_first_try": 7,
+    "vertebra_shrunk": 3,
+    "vertebra_failed_attempts": 39,
+    "vertebra_shrink_area_ratio_mean": 0.6830037086651618,
+    "girdle_attempts": 1,
+    "girdle_first_try": 1,
+    "girdle_shrunk": 0,
+    "girdle_failed_attempts": 0,
+    "girdle_shrink_area_ratio_mean": null,
+    "skull_spacer_attempts": 1,
+    "skull_spacer_first_try": 0,
+    "skull_spacer_shrunk": 0,
+    "skull_spacer_failed_attempts": 1,
+    "skull_spacer_shrink_area_ratio_mean": null,
+    "ribs_placed": 10,
+    "vertebrae_placed": 10,
+    "warnings": [
+     "No head was detected: the kit is built as a generic structure along the main axis.",
+     "The fossil kit has 24 pieces (target 30): the count follows the detected structure and what fits at this size and thickness."
+    ],
+    "intended_extra_pieces": 66,
+    "side_iou_actual": 0.5419566702503216,
+    "side_iou_intended": 0.6916365953070638,
+    "side_env_iou_actual": 0.5710105615902344,
+    "side_env_iou_intended": 0.777840051725602,
+    "front_area_actual_mm2": 10696.678592423423,
+    "front_area_intended_mm2": 14374.52370047647
+   },
+   "sheet_fit_attempts": 1,
+   "volume_vs_reconstruction": {
+    "reference": "reconstruction",
+    "voxel_mm": 1.0,
+    "volume_iou": 0.029533749589557054,
+    "kit_volume_fraction": 0.041382791662908085,
+    "proj_iou_side": 0.5054786888290463,
+    "proj_iou_front": 0.3629184176206347,
+    "proj_iou_top": 0.41889439519787813,
+    "completeness_mean_mm": 21.054450171450114,
+    "completeness_p95_mm": 48.33218389437829,
+    "accuracy_mean_mm": 22.51589074857015,
+    "accuracy_p95_mm": 48.342527861087284,
+    "chamfer_mm": 21.785170460010132,
+    "coverage_3mm": 0.06980412777704746,
+    "coverage_6mm": 0.14162881166956362,
+    "material_outside_ref": 0.27811401125497326,
+    "intended": {
+     "volume_iou": 0.06841063771686282,
+     "proj_iou_front": 0.49674007534048104,
+     "proj_iou_top": 0.5917257520479108,
+     "completeness_mean_mm": 17.108418723349665,
+     "chamfer_mm": 18.992201042844897,
+     "coverage_6mm": 0.21943726294981716
+    },
+    "generator_body_vs_reference": {
+     "volume_iou": 0.8250016343251168,
+     "proj_iou_front": 0.8510932535974585,
+     "proj_iou_top": 0.7946819978440531
+    },
+    "kit_vs_generator_body": {
+     "volume_iou": 0.031469168020281775,
+     "chamfer_mm": 21.044255947295618,
+     "coverage_6mm": 0.1482100595115002
+    }
+   }
+  },
+  "solid_ai3d": {
+   "status": "failed",
+   "error": "PIECES_DO_NOT_FIT: These pieces do not fit on the selected sheet. Increase the sheet size or reduce the puzzle size.",
+   "engine_rejections": [
+    {
+     "code": "INVALID_GEOMETRY",
+     "message": "Rib C1 would have to pass through an unrelated part of P1-.",
+     "plan_size": 2
+    }
+   ]
+  }
+ },
+ "harness_seconds": 62.1
+}

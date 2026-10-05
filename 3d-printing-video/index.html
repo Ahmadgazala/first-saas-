@@ -1,0 +1,18 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>3D Printing Explainer</title>
+<style>html,body{margin:0;background:#000;overflow:hidden}canvas{display:block}</style>
+</head><body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script src="amp.js"></script>
+<script src="anim.js"></script>
+<script>
+// Live preview: open index.html in a browser and press space to play with audio.
+if (!window.__RENDER__) {
+  const au = new Audio('vo.wav'); let playing = false, t0 = 0;
+  const loop = () => { render(playing ? au.currentTime : t0); requestAnimationFrame(loop); };
+  addEventListener('keydown', e => { if (e.code === 'Space') { playing = !playing; playing ? au.play() : au.pause(); } });
+  addEventListener('click', e => { au.currentTime = e.clientX / innerWidth * 156; t0 = au.currentTime; });
+  loop();
+}
+</script>
+</body></html>

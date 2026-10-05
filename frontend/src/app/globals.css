@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0c1222;
+  --color-ink-soft: #334155;
+  --color-muted: #64748b;
+  --color-line: #e6e3dc;
+  --color-paper: #faf9f6;
+  --color-card: #ffffff;
+  --color-laser: #ea4f1d;
+  --color-laser-dark: #c43d10;
+  --color-laser-soft: #fdebe3;
+  --color-wood: #d7b07c;
+  --color-wood-dark: #a8763d;
+  --color-wood-soft: #f5ecdf;
+  --color-ok: #15803d;
+  --color-warn: #b45309;
+  --color-warn-soft: #fef3c7;
+  --color-err: #b91c1c;
+  --color-err-soft: #fee2e2;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+html {
+  background: var(--color-paper);
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.grid-paper {
+  background-image:
+    linear-gradient(to right, rgb(12 18 34 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(12 18 34 / 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.checker {
+  background-color: #fff;
+  background-image:
+    linear-gradient(45deg, #f1efe9 25%, transparent 25%),
+    linear-gradient(-45deg, #f1efe9 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #f1efe9 75%),
+    linear-gradient(-45deg, transparent 75%, #f1efe9 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+}
+
+@keyframes laser-sweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.laser-sweep::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgb(234 79 29 / 0.25), transparent);
+  animation: laser-sweep 1.4s ease-in-out infinite;
+}
+
+/* On-screen sheet preview only: the downloaded SVG keeps its 0.1 mm laser hairlines. */
+.sheet-svg path {
+  vector-effect: non-scaling-stroke;
+  stroke-width: 1px;
+}
+
+.sheet-svg path.is-selected {
+  stroke: #ea4f1d;
+  stroke-width: 2.5px;
+  fill: rgb(234 79 29 / 0.14);
+}
+.sheet-svg path.is-connected {
+  stroke: #2563eb;
+  stroke-width: 1.6px;
+  fill: rgb(37 99 235 / 0.07);
+}
+.sheet-svg path.is-dimmed {
+  opacity: 0.35;
+}

@@ -1,0 +1,4 @@
+node_modules
+.next
+public/__e2e
+.env*.local

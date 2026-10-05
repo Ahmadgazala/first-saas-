@@ -1,0 +1,94 @@
+# ============================================================================
+# PuzzleCut .gitignore
+# The remote repository is PUBLIC: nothing private, personal or huge may be committed.
+# Never ignore source code or test fixtures (backend/tests/data/, frontend/public/showcase/, tests/*.py).
+# ============================================================================
+
+# ---- Secrets and local configuration --------------------------------------
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+*.p12
+credentials*.json
+secrets*.json
+
+# ---- Python ----------------------------------------------------------------
+backend/.venv/
+lion/.venv/
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---- Node / Next.js --------------------------------------------------------
+node_modules/
+frontend/.next/
+.next/
+frontend/out/
+frontend/next-env.d.ts
+frontend/public/__e2e/
+dist/
+build/
+coverage/
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+
+# ---- Runtime data: user uploads, generated output, local database ----------
+# (photos and models uploaded through the app, SVG/DXF/PDF produced for them)
+backend/data/
+*.sqlite
+*.sqlite3
+*.db
+
+# ---- Generated measurements and local caches (regenerable) -----------------
+# TripoSR reconstructions cached by the fidelity harness (derived from local photos)
+backend/fidelity/cache/
+# overlay images of each harness run; results.json / results.csv / report.md / cases/*.json ARE kept
+backend/fidelity/reports/*/overlays/
+.cache/
+hf-cache/
+
+# ---- Logs and temporary files ----------------------------------------------
+*.log
+*.tmp
+tmp/
+temp/
+
+# ---- Large local files and model weights ------------------------------------
+# GitHub rejects files > 100 MB: the explainer video is 112 MB.
+*.mp4
+*.mov
+*.wav
+*.ckpt
+*.safetensors
+*.onnx
+*.pt
+*.pth
+
+# ---- Local third-party reference images (not redistributable) ----------------
+backend/fidelity/photos/
+lion/reference.jpg
+
+# ---- Local AI-agent installs and machine-specific config --------------------
+# Skills are installed per developer (skills-lock.json records what was installed and IS tracked).
+.agents/
+.claude/skills/
+.claude/settings.local.json
+# contains absolute paths of one machine; a portable version can be added later
+.claude/launch.json
+
+# ---- OS / editor -------------------------------------------------------------
+.DS_Store
+.idea/
+.vscode/
